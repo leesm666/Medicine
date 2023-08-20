@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedRecord">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="30dp"
+            tools:context=".MedRecord"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="215dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="알림 이름 설정"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="91dp" />
+
+                <TextView
+                    android:id="@+id/nameDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="메인 화면에 표시될 이름을 설정해주세요."
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="(ex. 감기약)"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_border"/>
+
+                <TextView
+                    android:id="@+id/pill_listTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="약 이름 나올 곳"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cycleSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="복약주기"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="91dp" />
+
+                <TextView
+                    android:id="@+id/cycleDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="얼마나 자주 복용하나요?"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/timelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/mon"
+                            android:layout_weight="1"
+                            android:text="월"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/tue"
+                            android:layout_weight="1"
+                            android:text="화"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/wed"
+                            android:layout_weight="1"
+                            android:text="수"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/thu"
+                            android:layout_weight="1"
+                            android:text="목"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/fri"
+                            android:layout_weight="1"
+                            android:text="금"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/sat"
+                            android:layout_weight="1"
+                            android:text="토"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/sun"
+                            android:layout_weight="1"
+                            android:text="일"
+                            android:textColor="#000000" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </FrameLayout>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <com.google.android.material.chip.ChipGroup-->
+<!--                    android:id="@+id/cycle"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    tools:layout_editor_absoluteX="match_parent"-->
+<!--                    tools:layout_editor_absoluteY="199dp">-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip1"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="월"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip2"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="화"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip3"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="수"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip4"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="목"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip5"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="금"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip6"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="토"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <com.google.android.material.chip.Chip-->
+<!--                        android:id="@+id/cycleChip7"-->
+<!--                        style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="-5dp"-->
+<!--                        android:text="일"-->
+<!--                        tools:layout_editor_absoluteX="276dp"-->
+<!--                        tools:layout_editor_absoluteY="226dp" />-->
+
+<!--                    <android.widget.CheckBox-->
+<!--                        android:id="@+id/everycheck"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_margin="270dp"-->
+<!--                        android:text="매일선택"-->
+<!--                        android:paddingLeft="3dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:button="@drawable/custom_checkbox"-->
+<!--                        android:checked="false"/>-->
+
+<!--                </com.google.android.material.chip.ChipGroup>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/timeSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="복약시간"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="91dp" />
+
+                <TextView
+                    android:id="@+id/timeDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="언제 복용하나요?"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/selectTime"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+
+                <android.widget.Button
+                    android:id="@+id/select1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="1회"
+                    android:background="@drawable/box_idcheck"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+
+                <android.widget.Button
+                    android:id="@+id/select2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="2회"
+                    android:background="@drawable/box_idcheck"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <android.widget.Button
+                    android:id="@+id/select3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="3회"
+                    android:background="@drawable/box_idcheck"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tl1"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <Button
+                    android:id="@+id/timeText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간 설정하기" />
+
+                <LinearLayout
+                    android:id="@+id/timeView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/tl2"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/timeText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간 설정하기" />
+
+                <LinearLayout
+                    android:id="@+id/timeView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl3"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <Button
+                    android:id="@+id/timeText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간 설정하기" />
+
+                <LinearLayout
+                    android:id="@+id/timeView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/daysSet"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="복약 일수 설정"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    tools:layout_editor_absoluteX="89dp"-->
+<!--                    tools:layout_editor_absoluteY="91dp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/daysDesc"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="며칠간 복용하나요? (※ 숫자만 입력해주세요.)"-->
+<!--                    tools:layout_editor_absoluteX="89dp"-->
+<!--                    tools:layout_editor_absoluteY="131dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/daysEdit"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@drawable/edit_text_border"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="number"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="3" />-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/startdaySet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시작 날짜 설정"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="91dp" />
+
+                <TextView
+                    android:id="@+id/startdayDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="언제부터 복용하나요?"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:hint=" 설정하세요"
+                    android:textColorHint="@color/black"/>
+
+                <android.widget.Button
+                    android:id="@+id/startBtn"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="40dp"
+                    android:text="시작 날짜 선택"
+                    android:background="@drawable/box_idcheck"
+                    android:textColor="#ffffff"
+                    android:textSize="40px"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/enddaySet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="종료 날짜 설정"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="91dp" />
+
+                <TextView
+                    android:id="@+id/enddayDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="며칠까지 복용하나요?"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="131dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:hint=" 설정하세요"
+                    android:textColorHint="@color/black"/>
+
+                <android.widget.Button
+                    android:id="@+id/endBtn"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="40dp"
+                    android:text="종료 날짜 선택"
+                    android:background="@drawable/box_idcheck"
+                    android:textColor="#ffffff"
+                    android:textSize="40px"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+<!--            <android.widget.Button-->
+<!--                android:id="@+id/submitBtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="등록하기"-->
+<!--                android:layout_marginLeft="90dp"-->
+<!--                android:layout_marginRight="90dp"-->
+<!--                android:background="@drawable/bin_green"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textSize="40px"-->
+<!--                android:textStyle="bold"/>-->
+
+            <android.widget.Button
+                android:id="@+id/submitBtnTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="등록하기"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/bin_green"
+                android:textColor="#ffffff"
+                android:textSize="40px"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

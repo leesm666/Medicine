@@ -1,3 +1,16 @@
+# 개발 환경 및 기술 스택
+**개발 도구** \
+Android Studio: 안드로이드 애플리케이션 개발 환경\
+Java: 안드로이드 앱 개발을 위한 주 프로그래밍 언어 \
+Google Maps: 위치 기반 서비스 구현\
+
+**데이터베이스 및 백엔드** \
+SQLite: 로컬 데이터베이스 관리 \
+Firebase: 클라우드 기반 실시간 데이터베이스 및 백엔드 서비스 \
+
+**머신러닝** \
+ML Kit: 구글의 모바일 머신러닝 SDK 
+
 # 지금이약 
 ![p pdf-5-5](https://github.com/user-attachments/assets/053ae696-d063-429b-ac55-63c33db07c41)
 ![p pdf-6-6](https://github.com/user-attachments/assets/a6d09994-d9bd-496b-a752-338607e212ab)
